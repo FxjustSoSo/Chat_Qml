@@ -381,11 +381,11 @@ Item {
                     }
                     onClicked: {//有bug，登录面板的警告文字不居中
                         //console.log("登录")
-
-                        //if(root.mLoginIDText == "" || root.mLoginPwText == ""){
-                            paA_Login_Warning_Forward.running = true
+                        $PD.init()
+                        if(root.mLoginIDText == "" || root.mLoginPwText == ""){
                             text_Login_Warning.text = "账号或密码不正确，请重新输入!"
-                        //}
+                            paA_Login_Warning_Forward.running = true
+                        }
 
 
                     }
